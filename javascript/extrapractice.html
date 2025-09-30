@@ -5,6 +5,8 @@
 </head>
 <body>
 
+  <button class="js-click" onclick="updateButton()"> click </button>
+
 
   <script>
     //12a.
@@ -15,7 +17,9 @@
     add();
     add();
     */
-
+ 
+    //12b
+    /*
     const add =  () => {
       console.log(2+3);
     };
@@ -32,6 +36,17 @@
     });
 
     runTwice(add);
+    */
+
+     //12c.
+   
+    function updateButton(){       
+         const click = document.querySelector('.js-click');
+    setTimeout(function(){
+      click.innerHTML = 'finished';
+    }, 1000);
+
+  }  
 
   </script>
   
