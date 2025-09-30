@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>positioning</title>
+  <style>
+    .header{
+      background-color: lightgreen;
+      color: green;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+    }
+    .sidebar{
+      background-color: green;
+      color: lightgreen;
+      position:fixed;
+      left: 0;
+      bottom: 0;
+      top: 40px; ;
+      
+    }
+
+    .absolute{
+      position:absolute;
+      background-color: red;
+      color:white;
+
+
+    }
+
+  </style>
+</head>
+<body style="height: 3000px; padding-top: 60px; padding-left: 70px;" > 
+  <div class="header">header</div>
+  <div class="sidebar">sidebar
+  <div class="absolute">absolute</div>
+  </div>
+
+
+
+  <div style="width: 100px; height: 100px; background-color: lightblue;">
+    div1</div>
+
+  <div style="width: 100px; height: 100px;background-color: lightpink;">
+    div2</div>
+</body>
+</html>

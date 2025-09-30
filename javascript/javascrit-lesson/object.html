@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>object</title>
+</head>
+<body>
+  
+  <script>
+    const basketball = {
+      name: 'abraham',
+      price: 2095,
+      ['delivery-day']:'3days'
+    }
+    basketball.price += 500;
+    console.log( basketball['delivery-day']);
+
+    localStorage.setItem('product', JSON.stringify(basketball));
+    console.log(localStorage.getItem('product')) ;
+
+
+   localStorage.setItem('nega', JSON.stringify(basketball));
+
+    const basketball1 = JSON.parse(localStorage.getItem('nega'));
+    console.log(basketball1)
+
+
+    //destructuring:
+    // instead of this -->  const name = basketball.name;  
+    //use this syntax under, its a shortcut
+    const {name} = basketball;
+    console.log(name);
+
+    // shorthand proterties:
+    // the 'name' variable from basketball- 
+    // can be used inside of another object
+    // example under
+    const basketball2={
+      name
+    };
+    console.log(basketball2);
+
+
+    //shorthand  method:
+   // which is you dont need to put function and function name
+   // just reference name/variable name(method)
+       const basketball3={
+       method(){
+        console.log('message');
+       }
+    }   
+       basketball3.method();
+
+      function comparePrice(a,b){
+        if (a.price<b.price){
+          return a;
+        }else{
+          return b;
+        }
+ 
+      };
+       const product1= {
+        name: 'ball',
+        price: 20
+       };
+        const product2= {
+        name: 'gloves',
+        price: 21
+       };
+       //console.log(comparePrice(product1,product2));
+       
+      function isSameProduct(product1, product2) {
+
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+        /* 
+         return (
+          product1.name === product2.name &&
+          product1.price === product2.price
+
+        );  ^^ shorter version same result ^^    */
+      }
+       console.log(isSameProduct(product1,product2));
+
+       console.log('hello'.toLowerCase())
+
+
+
+       
+
+  </script>
+
+</body>
+</html> 

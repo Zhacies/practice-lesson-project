@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>grid</title>
+    <style>
+        .header{
+            display:grid;
+            grid-template-columns: 50px 50px 40px;
+            margin-bottom: 20px;
+        }
+        .header1{
+            
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+
+        }
+        .grindme{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items:center ;
+        }
+        .hi{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="header">
+            
+            <div style="background-color: lightblue; height: 100px;">
+                lightblue 
+            </div>
+
+            <div style="background-color: lightpink;" >
+                lightpink
+            </div>
+
+            <div style="background-color: lightblue; height: 100px;">
+                lightblue 
+            </div>
+
+        </div>  
+
+        <div class="header1">
+            
+            <div class="grindme" style="background-color: lightblue; height: 100px;">
+                lightblue 
+            </div>
+            <div style="background-color: lightpink; height: 100px; align-items: center;">
+                lightpink
+            </div>
+            <div style="background-color: lightblue; height: 100px;">
+                lightblue 
+            </div>
+            <div style="background-color: lightpink; height: 100px;">
+                lightpink
+            </div>
+            <div style="background-color: lightblue; height: 100px;">
+                lightblue 
+            </div>
+            <div style="background-color: lightpink; height: 100px;">
+                lightpink
+            </div>
+        </div>  
+
+    </div>
+    
+</body>
+</html>
