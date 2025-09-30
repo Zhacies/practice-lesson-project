@@ -39,14 +39,21 @@
     */
 
      //12c.
-   
+     /*
     function updateButton(){       
          const click = document.querySelector('.js-click');
     setTimeout(function(){
       click.innerHTML = 'finished';
     }, 1000);
 
-  }  
+  }  */
+     function updateButton(){       
+         const click = document.querySelector('.js-click');
+         click.innerHTML = 'loading';
+    setTimeout(function(){
+         click.innerHTML = 'finished';
+    }, 2000); 
+  }
 
   </script>
   
