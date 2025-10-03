@@ -58,8 +58,8 @@
     }, 2000); 
   }
 */
-  let timeoutId;
 
+    let timeoutId;
   function displayMessage() {
     const messageElement = document.querySelector('.js-message');
     messageElement.innerHTML = 'Added';
@@ -67,11 +67,21 @@
     // First, cancel the previous timeout so that
     // it doesn't remove the message too quickly.
     clearTimeout(timeoutId);
-
-    timeoutId = setTimeout(function() {
+     timeoutId = setTimeout(function() {
       messageElement.innerHTML = '';
     }, 2000);
+   
   }
+  
+   // Example of cancelling a timeout
+    let timer = setTimeout(() => {
+    console.log("This will NOT run");
+    }, 1000);
+
+    // Cancel it
+    clearTimeout(timer);
+    
+
     
 
 
