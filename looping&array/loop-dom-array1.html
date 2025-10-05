@@ -9,34 +9,35 @@
 
   function isPalindromeIterative(str) {
  
-  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g,'');
   
   let left = 0;
   let right = cleanedStr.length - 1;
 
-  while (left < right) {
+  while (left < right) {//7 length 1st print 
     if (cleanedStr[left] !== cleanedStr[right]) {
+      console.log(cleanedStr, left, right);
       return false;
     }
 
     left++;
     right--;
   }
-
+  console.log(cleanedStr,left,right);
   return true;
      
 }
 
-console.log(isPalindromeIterative("racecar")); // true
+console.log(isPalindromeIterative("raciicar")); // true 
 console.log(isPalindromeIterative("Was it a car or a cat I saw?")); // true
 console.log(isPalindromeIterative("world")); // false
 
 
 let text = "Hello, World! 123";
 let result = text.replace(/[0-9]/g, '-');
-let result1 = text.replace(/[A-Z\s]/g, '');
+let result1 = text.replace(/[^a-z0-9]/g, '');
 
-if (result1.length-1 === 12 && text>result1){
+if (result1.length-1 === 12 && text>result1){ //text> result1 another condition to fufill first condition
   console.log(result1.length-1);
 }
 
