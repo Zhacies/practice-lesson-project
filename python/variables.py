@@ -1,4 +1,5 @@
 import random 
+
 string = "qwertyuoipasdfghjkl"
 numbers = "1234567890"
 operators = '%^&!#$'
@@ -10,4 +11,3 @@ for x in range(15):
 
 print(password)
  
-

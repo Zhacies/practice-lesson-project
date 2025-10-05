@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice </title>
+  <style> 
+    p{ margin-bottom:5px; margin-top: 5px;}
+  </style>
+</head>
+<body>
+
+  <input placeholder="input name" class="input-js">
+  <button onclick="clickMe()"> click me </button>
+  <div class="container"></div>
+
+
+
+  <script>
+    let name2 = [];
+   
+
+    function clickMe(){
+      const inputElement = document.querySelector('.input-js');
+       name2.push(inputElement.value);
+       console.log(name2);
+       inputElement.value = '';
+       listScreen();
+
+
+    }
+    
+    function listScreen(){
+      
+      let todoList = '';
+
+      for (let i = 0; i<name2.length; i++){
+        
+        let list = name2[i];
+        const html = `<p>${list}</p>`;
+        todoList += html;
+        console.log(todoList);
+        
+      }
+      const inputContainer= document.querySelector('.container')
+        .innerHTML = todoList;
+      
+        
+        
+    }
+
+
+
+
+
+/*
+    function clickMe(){
+
+      for(let i = 0;i<name.length; i++){
+      let num = name[i];
+      container += num;
+      }
+     console.log(container);
+    }
+*/
+
+
+  </script>
+</body>
+</html>
