@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="heads" onclick="
+        changeText('head')"> 
+        head
+      </button>
+      <button class="change" onclick=" changeText('tail')">
+        tail
+      </button>
+      <p class="choose">
+        you chose:
+      </p>
+
+    </div>
+    
+    <input type="search" class="name" placeholder="Name" onkeyup="enter(event)">
+    <button class="input" onclick="namin()">submit</button>
+    <p class="changing"></p>
+
+
+
+  <script>  
+
+ function changeText(choose){
+    const changed = document.querySelector('.choose');
+    if(choose==='head'){
+      changed.innerText= `you chose:${choose}`;
+    }else if(choose==='tail'){
+      changed.innerText = `you chose:${choose}`;
+    };
+    
+ }
+
+  function namin(){
+    const name = document.querySelector('.name');
+    let name1 = name.value;
+    document.querySelector('.changing').innerHTML= `${name1} = the text`;
+    name.value = '';
+    
+  }
+  function enter(event){
+    if (event.key === 'Enter'){
+      namin()
+    }
+  }
+
+
+  
+
+  </script>
+</body>
+</html>

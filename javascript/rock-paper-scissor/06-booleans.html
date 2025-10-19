@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+<title>booleans</title>
+
+</head>
+
+<body>
+
+  <button onclick="
+  let compmove ='';
+  const random_number= Math.random();
+  if(random_number < 1/3){
+    compmove='rock';
+  }else if ( random_number<2/3){ 
+    compmove = 'paper';
+  }else if ( random_number< 1){
+    compmove ='scissors';
+  }
+   let result ='';
+    if(compmove ==='rock'){
+    result= 'tie';
+   } else if (compmove === 'paper'){
+    result = 'you lose pweh';
+   }else if (compmove === 'scissors'){
+    result = ' you won';
+   }
+   alert(`you picked rock.computer picked ${compmove}.${result}`);
+  "> rock </button>
+
+
+  <script>
+  /*
+    true
+    false
+
+    console.log(typeof 'true');
+
+    if(false) {
+      console.log('hello');
+
+    }else{
+      console.log('else');
+    }
+
+    const age= 15;
+
+    if(age>=16) 
+    { console.log('hello');
+
+    }else if(age>=14) 
+    {
+      console.log('you cannot drive');
+    } else{
+        console.log('pakyu di pa rin pwede');
+    }
+
+    
+     console.log(true || false);
+
+    if (5){
+      console('truthy')
+    }
+
+
+
+    console.log(0.2>=0 && 0.2 < 1/3); */
+     /* 0.2>=0 true  && 0.2 =< 0.3 true = as result true */
+
+     /* turnery operator */
+     const results = true? 'niga' : 'not nigga'; //if false result is: not nigga
+     console.log(results); 
+    /*  const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'heads';
+      console.log(guess === result ? 'You win!' : 'You lose!'); */
+
+
+
+     /* guard operator */
+      let choices = 'hi';
+      let choice = choices  && 'hello';
+      console.log(choice);/* hello */
+    
+    /* default operator */
+      let choices1 = 'hi';
+      let choice1 = choices1 || 'hello';
+      console.log(choice1); /* hi */
+
+  
+
+
+  </script>
+</body>
+</html> 
